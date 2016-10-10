@@ -21,6 +21,7 @@ program
   .option('-l, --log-path [path]', 'Log path')
   .option('-m, --internal-port [port]',
     'HTTPs port to use for internal proxying "MITM" server (mandatory on Windows systems)')
+  .option('-c, --control-file [file]', 'Control file that contines keys for controlling the configuration.' )
   .parse(process.argv);
 
 require('../lib/proxy').powerup(program);
